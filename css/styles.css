@@ -256,8 +256,8 @@ body {
     transform: translateX(100%);
     transition: 0.6s;
     justify-content: center;
-    display: flex;
     overflow-y: scroll;
+    display: flex;
     }
 
     .cardapio-content{

@@ -21,10 +21,12 @@ $(document).ready(function(){
 
     $( ".btn-acessar" ).click(function() {
         $(".cardapio").css({"transform": "translateX(0px)"});
+
       });
 
       $( ".fechar" ).click(function() {
         $(".cardapio").css({"transform": "translateX(100%)"});
+  
       });
 
       // FORMULÁRIO
@@ -84,7 +86,7 @@ $(document).ready(function(){
             };
             
             $('#testeteste').text(var1 + "" + selec);
-            window.location = "https://api.whatsapp.com/send?phone=+5599984500145&text= Olá, este é meu pedido: [--- Passo 1 ---] " + "*"+var1+"*" + " [--- Ingredientes: ---] " + "*"+selec+"*" + " [--- Tipo de Massa: ---] " + "*"+var3+"*" + " [--- Molho: ---] " + "*"+var4+"*" + " [--- Adicionais: ---] " + "*"+add+"*";
+            window.location = "https://api.whatsapp.com/send?phone=+5599984500145&text= Olá, este é meu pedido:%0A[--- Passo 1 ---] " + "*"+var1+"* %0A" + "[--- Ingredientes: ---] " + "*"+selec+"* %0A" + " [--- Tipo de Massa: ---] " + "*"+var3+"* %0A" + " [--- Molho: ---] " + "*"+var4+"* %0A" + " [--- Adicionais: ---] " + "*"+add+"* %0A";
     
 
 
