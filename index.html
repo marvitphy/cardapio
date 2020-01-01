@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-site-verification" content="v-idfmyEfHZYYgdGBs74XFMpBi0Vc_9Qr2kMNF0Wzm8" />
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- FONT AWSOME ICONS-->
+
+    <link rel="stylesheet" href="./css/all.css">
+    <title>Trincheira</title>
+</head>
+<body>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+    <!-- NAVEGAÇÃO -->
+    <nav class="nav">
+
+        <div class="nav-menu flex-row">
+            <div class="nav-brand">
+                <a href="#" class="text-gray">Trincheira</a>
+            </div>
+            <div class="toggle-collapse">
+
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+                </div>
+
+
+            </div>
+            <div>
+                <ul class="nav-items">
+
+                    <li href="#" class="nav-link"> 
+                        <a href="">Início</a>
+                    </li>
+                    <li href="#" class="nav-link"> 
+                        <a href="">Sobre</a>
+                    </li>
+                    <li href="#" class="nav-link" style="letter-spacing: 2px; font-weight: bold; font-style: italic; transition: 0.5s;"> 
+                        <a href="">Portfólio</a>
+                    </li>
+                    <li href="#" class="nav-link"> 
+                        <a href="">Contato</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="social text-gray">
+                <a href="https://www.facebook.com/trincheiramarketing" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com/trincheira_marketing/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="http://api.whatsapp.com/send?phone=+5599984500145" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- PRINCIPAL -->
+    
+        
+
+        <section>
+            <div class="container-central">
+
+                <img src="logo.png" alt="" data-aos="fade-right"><br>
+                <h1 class="titulo-titulo" data-aos="fade-right">Massas e Cia.</h1>
+                <button class="btn-acessar" data-aos="">Acessar Cardápio</button>
+            </div>
+        </section>
+
+        <section>
+            <div class="cardapio"> 
+
+                <div class="fechar">
+                    <i class="fas fa-times"></i>
+                </div>
+
+                <div class="cardapio-content">
+                    <!-- MONTE SUA MASSA -->
+                    <div class="img-pastas">
+                        <div class="logo-cardapio">
+
+                           <img width="80px" height="80px"src="logo.png" alt="">
+
+                        </div>
+                        
+                    </div>
+                   <div style="text-align: center; margin-top: 55px;">
+                    <h1 href="#" class="titulo-cardapio">Monte sua massa</a>
+                </div>
+
+                    <!-- MONTE SUA MASSA -->
+                
+                    
+                
+                <form class="cardapio-form">
+
+                    <!-- GORDURA -->
+                    <div class="gordura">
+                        <h3 class="tipo-escolha" style="margin-bottom: 14px">1º Passo</h3>
+
+                    <input type="radio" name="gordura" value="Azeite"> <span class="txt-cardapio">Azeite</span><br>
+                    <input type="radio" name="gordura" value="Manteiga"> <span class="txt-cardapio">Manteiga</span><br>
+                    <span id="result"></span><span id="selected"> Selecionado(a)</span> </div>
+                    <div class="counter"> 
+
+
+
+                    </div>
+
+                    <!-- GORDURA -->
+
+                      <hr>
+                      <!-- TIPO DE MASSA -->
+
+                      <h3 class="tipo-escolha">Tipo de Massa</h3>
+                    <select name="carlist" form="carform" class="cardapio-lista" id="massa">
+                        <option value="Massa Caseira">Espaguete</option>
+                        <option value="Pene">Parafuso</option>
+                        <option value="Fettucine">Talharim</option>
+                        <option value="Ravioli">Caseiro</option>
+                        <option value="Nhoqe">Penne</option>
+                      </select>
+                      <hr>
+                      
+
+                      <!-- TIPO DE MASSA -->
+
+                    <!-- INGREDIENTES -->
+                      <div class="ingredientes" id="ingredientes-container">
+                        <h3 class="tipo-escolha">Ingredientes</h3>
+                        <small style="color: #454545">Selecione apenas 10 ingredientes</small> <br><br>
+    
+                        <input type="checkbox" name="ingredientes" value="Alho"> <span class="txt-cardapio">Alho</span><br>
+                        <input type="checkbox" name="ingredientes" value="Cebola"> <span class="txt-cardapio">Cebola</span><br>
+                        <input type="checkbox" name="ingredientes" value="Presunto"> <span class="txt-cardapio">Presunto</span><br>
+                        <input type="checkbox" name="ingredientes" value="Calabresa"> <span class="txt-cardapio">Calabresa</span><br>
+                        <input type="checkbox" name="ingredientes" value="Bacon"> <span class="txt-cardapio">Bacon</span><br>
+                        <input type="checkbox" name="ingredientes" value="Peito de Peru"> <span class="txt-cardapio">Peito de Peru</span><br>
+                        <input type="checkbox" name="ingredientes" value="Frango"> <span class="txt-cardapio">Frango</span><br>
+                        <input type="checkbox" name="ingredientes" value="Mussarela"> <span class="txt-cardapio">Mussarela</span><br>
+                        <input type="checkbox" name="ingredientes" value="Salsicha"> <span class="txt-cardapio">Salsicha</span><br>
+                        <input type="checkbox" name="ingredientes" value="Tomate Seco"> <span class="txt-cardapio">Tomate Seco</span><br>
+                        <input type="checkbox" name="ingredientes" value="Milho"> <span class="txt-cardapio">Milho</span><br>
+                        <input type="checkbox" name="ingredientes" value="Ervilha"> <span class="txt-cardapio">Ervilha</span><br>
+                        <input type="checkbox" name="ingredientes" value="Azeitona"> <span class="txt-cardapio">Azeitona</span><br>
+                        <input type="checkbox" name="ingredientes" value="Palmito"> <span class="txt-cardapio">Palmito</span><br>
+                        <input type="checkbox" name="ingredientes" value="Alcaparras"> <span class="txt-cardapio">Alcaparras</span><br>
+                        <input type="checkbox" name="ingredientes" value="Champignon"> <span class="txt-cardapio">Champignon</span><br>
+                        <input type="checkbox" name="ingredientes" value="Uvas-passas"> <span class="txt-cardapio">Uvas-passas</span><br>
+                        <input type="checkbox" name="ingredientes" value="Cheddar"> <span class="txt-cardapio">Cheddar</span><br>
+                        <input type="checkbox" name="ingredientes" value="Tomate"> <span class="txt-cardapio">Tomate</span><br>
+                        <input type="checkbox" name="ingredientes" value="Cheiro-verde"> <span class="txt-cardapio">Cheiro-verde</span><br>
+                        <input type="checkbox" name="ingredientes" value="Salsinha"> <span class="txt-cardapio">Salsinha</span><br>
+                        <input type="checkbox" name="ingredientes" value="Cebolinha"> <span class="txt-cardapio">Cebolinha</span><br>
+                        <input type="checkbox" name="ingredientes" value="Orégano"> <span class="txt-cardapio">Orégano</span><br>
+                        <input type="checkbox" name="ingredientes" value="Pimenta Calab"> <span class="txt-cardapio">Pimenta Calab</span><br>
+                        <input type="checkbox" name="ingredientes" value="Curry"> <span class="txt-cardapio">Curry</span><br>
+                        <input type="checkbox" name="ingredientes" value="Catupiry"> <span class="txt-cardapio">Catupiry</span><br>
+                        <input type="checkbox" name="ingerdientes" value="Batata Palha"> <span class="txt-cardapio">Batata Palha</span><br>
+                        <div class="counter"> 
+                            <span id="count-checked-checkboxes"></span>
+                            <span id="aviso-ingredientes"> <br>Selecione apenas 10 ingredientes</span>
+                            <span id="selected-cbx"> Ingrediente(s) Selecionado(s)</span>
+                            
+                        
+                        </div>
+                        </div>
+                        <!-- INGREDIENTES -->
+
+                        <!-- ESCOLHA O MOLHO -->
+                        <hr>
+                        <h3 class="tipo-escolha">Escolha o molho</h3>
+                      <div class="ingredientes">
+                        <select name="carlist" form="carform" class="cardapio-lista" id="molho">
+                            <option value="Branco">Branco</option>
+                            <option value="Rosé">Rosé</option>
+                            <option value="Queijos">Queijos</option>
+                            <option value="Vermelho">Vermelho</option>
+                            <option value="Picante">Picante</option>
+                            <option value="Bolhonhesa">Bolhonhesa</option>
+                            <option value="Evas">Ervas</option>
+                          </select>
+                        </div>
+
+                        <hr>
+
+                        <div class="cardapio-lista" id="adicionais" >
+                            <h3 class="tipo-escolha">Adicionais</h3>
+                            <input type="checkbox" name="adicionais" value="Camarão" style="margin-top: 20px">
+                            <span class="txt-cardapio">Camarão </span><small style="color: #e6202d; font-family: verdana; margin-left: 15px;">+R$3,00</small><br>
+                            <input type="checkbox" name="adicionais" value="Filé Desfiado"> <span class="txt-cardapio">Filé Desfiado</span><small style="color: #e6202d; font-family: verdana; margin-left: 15px;">+R$3,00</small><br>
+                            <input type="checkbox" name="adicionais" value="Salaminho"> <span class="txt-cardapio">Salaminho</span><small style="color: #e6202d; font-family: verdana; margin-left: 15px;">+R$3,00</small><br>
+                            
+                        </div>
+                        <!-- ESCOLHA O MOLHO -->
+                        
+                        <!-- BOTÃO ENVIAR -->
+                        
+                        <div id="msg-wpp">Agora basta enviar a mensagem que aparecerá no seu <i class="fab fa-whatsapp" style="font-size: 14px;"></i></div>
+                        <div id="btn-enviar">Finalizar Pedido <i class="fab fa-whatsapp" style="font-size: 25px"></i> </div>
+                        <span id="total"></span>
+                 
+                    
+                        
+                        
+                        <br><br><br>
+
+                        <!-- BOTÃO ENVIAR -->
+                </form>
+
+            </div>
+       
+            </div>
+        </section>
+
+
+    
+    <script src="./js/jquery3.4.1.min.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+</html> 
