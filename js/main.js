@@ -41,12 +41,16 @@ $(document).ready(function(){
             $("#count-checked-checkboxes").css({"color": "red"});
             $("#selected-cbx").css({"display": "none"});
             $("#aviso-ingredientes").css({"display": "initial"});
+            $("#btn-enviar").css({"pointer-events": "none"});
+            $("#btn-enviar").css({"background": "gray"});
         } 
         else{
             $('#count-checked-checkboxes').text(countCheckedCheckboxes );
             $("#count-checked-checkboxes").css({"color": "black"});
             $("#selected-cbx").css({"display": "initial"});
             $("#aviso-ingredientes").css({"display": "none"});
+            $("#btn-enviar").css({"pointer-events": "initial"});
+            $("#btn-enviar").css({"background": "black"});
             
         }
       });
