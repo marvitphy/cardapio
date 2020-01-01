@@ -435,8 +435,25 @@ input[type=checkbox] {
     border-radius: 20px;
 }
 
+#msg-wpp{
+    content: 'Acessar Cardápio';
+    display: table;
+    margin: 0 auto;
+    text-align: center;
+    border: none;
+    background: black;
+    color: white;
+    padding: 9px 40px 9px 40px;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+    font-family: Tahoma;
+    transition: 0.5s;
+    border-radius: 20px;
+}
+
 .bottom-elements{
-    
+
 }
 
 
