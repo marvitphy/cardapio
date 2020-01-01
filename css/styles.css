@@ -441,15 +441,16 @@ input[type=checkbox] {
     margin: 0 auto;
     text-align: center;
     border: none;
-    background: black;
-    color: white;
-    padding: 9px 40px 9px 40px;
+    color: darkgreen;
+    width: 220px;
+    
     font-size: 20px;
     letter-spacing: 0.5px;
     margin-top: 20px;
     font-family: Tahoma;
     transition: 0.5s;
     border-radius: 20px;
+    font-size: 14px;
 }
 
 .bottom-elements{
