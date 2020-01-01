@@ -496,7 +496,7 @@ input[type=checkbox] {
     }
 
     .cardapio-content{
-        display: inline;
+        display: inline-block;
         margin-top: 60px;
         font-size: 25px;
         width: initial;
