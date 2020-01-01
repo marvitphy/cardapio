@@ -286,7 +286,7 @@ overflow-y: scroll;
     color: black;
     display: inline;
     width: 250px;
-
+    margin-top: 15px;
     margin-bottom: 20px;
     height: 35px;
 }
