@@ -72,6 +72,10 @@ $(document).ready(function(){
             var var3 = $( "#massa" ).val();
             var var4 = $( "#molho" ).val();
 
+            var nomenome = $('.nome input[type="text"]').val();
+            var endereco = $('.endereco input[type="text"]').val();
+            var troco = $('.troco input[type="text"]').val();
+
             $('#adicionais input:checked').each(function() {
                 add.push($(this).filter(':checked').val());
                 });
@@ -79,12 +83,15 @@ $(document).ready(function(){
             if(add == ''){
                 var add = "Sem adicionais";
             };
+
+            
             
             $('#testeteste').text(var1 + "" + selec);
-            window.location = "https://api.whatsapp.com/send?phone=+5599984850548&text= Olá, este é meu pedido:%0A[--- Passo 1 ---] " + "*"+var1+"* %0A" + "[--- Ingredientes: ---] " + "*"+selec+"* %0A" + " [--- Tipo de Massa: ---] " + "*"+var3+"* %0A" + " [--- Molho: ---] " + "*"+var4+"* %0A" + " [--- Adicionais: ---] " + "*"+add+"* %0A";
+            window.location = "https://api.whatsapp.com/send?phone=+5599984850548&text= Olá, sou " + nomenome + " e este é meu pedido:%0A[--- Passo 1 ---] " + "*"+var1+"* %0A" + "[--- Ingredientes: ---] " + "*"+selec+"* %0A" + " [--- Tipo de Massa: ---] " + "*"+var3+"* %0A" + " [--- Molho: ---] " + "*"+var4+"* %0A" + " [--- Adicionais: ---] " + "*"+add+"* %0A" + " [--- Meu Endereço: ---] " + "*"+endereco+"* %0A" + " [--- Troco para: ---] " + "*"+troco+"* %0A";
 
       });
 
+      
       
 
       var $adicionais = $('#adicionais input[type="checkbox"]');
@@ -107,6 +114,9 @@ $(document).ready(function(){
         var teste = $('#ingredientes-container input[type="checkbox"]').length;
 
         $('#total-valor').text(teste);
+
+        
+
 
 
 

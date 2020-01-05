@@ -86,7 +86,10 @@
                 <img src="logo.png" alt=""><br>
                 <h1 class="titulo-titulo" data-aos="fade-right">Monalisa Massas</h1> <br>
                 <button class="btn-acessar" data-aos="">Acessar Cardápio</button>
+                
             </div>
+
+            <div style="text-align: center; margin-top: 30px; color: rgb(219, 219, 219); font-family: tahoma;"><span style="text-align: center;">Rua R M. Paranaguá, 770 <br> Centro de Balsas-MA</span></div>
         </section>
 
         <section>
@@ -107,16 +110,29 @@
                     <h1 href="#" class="titulo-cardapio">Monte sua massa</a>
                 </div>
 
+                <div class="infos">Valor da porção: <span class="valor-valor">R$ 17,99</span> </div>
+                <div class="infos">Taxa de Entrega <span class="valor-valor">R$ 5,00</span></div>
+
                     <!-- MONTE SUA MASSA -->
-                
-                    
                 
                 <form class="cardapio-form">
 
+                    <br>
+                    <div class="nome">
+                        <h3 class="tipo-escolha" style="margin-bottom: 14px">Digite seu Nome</h3>
+                        <input type="text" name="nome" id="nome-nome" placeholder="Maria de Lurdes">
+                        <span id="caraio"></span>
+                    </div>
+                    
+                    <div class="endereco">
+                        <h3 class="tipo-escolha" style="margin-bottom: 14px">Digite seu Endereço</h3>
+                        <input type="text" name="endereco" placeholder="Rua, Bairro, Número">
+                    </div>
+                    
+
                     <!-- GORDURA -->
                     <div class="gordura">
-                        <h3 class="tipo-escolha" style="margin-bottom: 14px">1º Passo</h3>
-
+                    <h3 class="tipo-escolha" style="margin-bottom: 14px">1º Passo</h3>
                     <input type="radio" name="gordura" value="Azeite"> <span class="txt-cardapio">Azeite</span><br>
                     <input type="radio" name="gordura" value="Manteiga"> <span class="txt-cardapio">Manteiga</span><br>
                     <span id="result"></span><span id="selected"> Selecionado(a)</span> </div>
@@ -148,7 +164,6 @@
                       <div class="ingredientes" id="ingredientes-container">
                         <h3 class="tipo-escolha">Ingredientes</h3>
                         <small style="color: #454545">Selecione apenas 10 ingredientes</small> <br><br>
-    
                         <input type="checkbox" name="ingredientes" value="Alho"> <span class="txt-cardapio">Alho</span><br>
                         <input type="checkbox" name="ingredientes" value="Cebola"> <span class="txt-cardapio">Cebola</span><br>
                         <input type="checkbox" name="ingredientes" value="Presunto"> <span class="txt-cardapio">Presunto</span><br>
@@ -211,6 +226,12 @@
                             <input type="checkbox" name="adicionais" value="Salaminho"> <span class="txt-cardapio">Salaminho</span><small style="color: #e6202d; font-family: verdana; margin-left: 15px;">+R$3,00</small><br>
                             <span id="addadd"></span>
                         </div>
+
+                        <div class="troco">
+                            <h3 class="tipo-escolha" style="margin-bottom: 14px">Troco pra quanto?</h3>
+                            <input type="text" name="troco" id="troco" placeholder="Ex: 50, 60, 70..." Value="R$ ">
+                            <span id="caraio"></span>
+                        </div>
                         <!-- ESCOLHA O MOLHO -->
                         
                         <!-- BOTÃO ENVIAR 
@@ -236,7 +257,8 @@
             <div style="text-align: center; margin-top: 20px">
                 <a href="https://www.instagram.com/monalisamassas/"><i class="fab fa-instagram" ></i></a>
                 <a href="https://www.facebook.com/monalisamassasespeciais"><i class="fab fa-facebook"></i></a>
-                <a href="#"> <i class="fas fa-envelope-square"></i> </a> 
+                <a href="#"> <i class="fas fa-envelope-square"></i> </a>
+
             </div>
             
           </div>
