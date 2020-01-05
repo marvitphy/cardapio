@@ -90,7 +90,7 @@ $(document).ready(function(){
       var $adicionais = $('#adicionais input[type="checkbox"]');
       var adicional = $adicionais.change(function(){
           var countadd = $adicionais.filter(':checked').length;
-            $('#addadd').text(countadd + " Ingrediente(s) Selecionado(s)");
+            $('#addadd').text(countadd + " Adicional(is) Selecionado(s)");
             if( countadd == 1){
                 precoadd = 232323;
             }
@@ -105,7 +105,7 @@ $(document).ready(function(){
 
 
         var teste = $('#ingredientes-container input[type="checkbox"]').length;
-        var teste_teste = teste.filter(':checked').length;
+
         $('#total-valor').text(teste);
 
 
