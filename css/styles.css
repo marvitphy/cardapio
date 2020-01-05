@@ -14,6 +14,7 @@ margin: auto;
 body {
 display: table-cell;
 vertical-align: middle;
+overflow-y: ;
 }
 
 :root{
@@ -201,6 +202,7 @@ border-radius: 15px;
 
 .container-central{
     padding-top: 50px;
+    overflow-y: auto;
 }
 
 .container-central img{
@@ -221,7 +223,7 @@ border-radius: 15px;
     padding: 9px 40px 9px 40px;
     font-size: 20px;
     letter-spacing: 0.5px;
-    margin-top: 30px;
+    margin-top: 15px;
     font-family: Tahoma;
     transition: 0.5s;
     border-radius: 20px;
@@ -276,10 +278,11 @@ overflow-y: scroll;
 .cardapio-lista{
     color: black;
     display: inline;
-    width: 250px;
+    width: 100%;
     margin-top: 15px;
     margin-bottom: 20px;
     height: 35px;
+    
 }
 
 .tipo-escolha{
@@ -486,12 +489,14 @@ input[type=checkbox] {
     color: black;
     height: 80px;
     font-size: 35px;
+    margin-top: 30px;
 } 
 
 .infos{
     font-size: 16px;
     margin-top: 25px;
     font-family: tahoma;
+    text-align: center;
     
 }
 
