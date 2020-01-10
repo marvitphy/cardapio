@@ -613,6 +613,11 @@ input[type=checkbox] {
     background-size: cover;
     background-position: center;
 }
+#img-combo7{
+    background-image: url('../../mokai/assets/combo7.jpeg');
+    background-size: cover;
+    background-position: center;
+}
 
 .valorcombo{
 
