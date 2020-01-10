@@ -3,7 +3,7 @@
 html, body {
 
 width: 100%;
-background: #300808;
+background: black;
 }
 
 html {
@@ -233,23 +233,24 @@ border-radius: 15px;
     background: rgb(56, 20, 20);
 } 
 
-
-
-
-
 .cardapio{
+
     background: white;
     width: 100%;
     height: 100%;
     z-index:1001;
     position:fixed;
-top:0px;
-right:0px;
-transform: translateX(100%);
-transition: 0.6s;
-justify-content: center;
-display: flex;
-overflow-y: scroll;
+    top:0px;
+    right:0px;
+    transform: translateX(100%);
+    transition: 0.6s;
+    justify-content: center;
+    display: flex;
+    overflow-y: scroll;
+}
+
+.mostrar{
+    transform: translateX(0px);
 }
 
 .cardapio-content{
@@ -390,6 +391,7 @@ input[type=checkbox] {
 }
 
 .img-pastas{
+    background-image: url('../assets/sushift.jpg');
    
     display: flex;
     flex-direction: row;
@@ -422,8 +424,7 @@ input[type=checkbox] {
     margin-top: 75px;
 }
 
-#btn-enviar{
-    content: 'Acessar Cardápio';
+.btn-enviar{
     display: table;
     margin: 0 auto;
     text-align: center;
@@ -515,6 +516,167 @@ input[type=checkbox] {
     width: 100%;
 }
 
+.combo{
+    background: black;
+    margin-top: 5px;
+    padding: 7px 12px 7px 12px;
+    color: white;
+    font-size: 18px;
+    width: 100%;
+    
+    
+
+}
+
+.combos-title{
+    font-size: 24px;
+    font-weight: normal;
+    display: block;
+    margin-top: 15px;
+    background: rgb(14, 102, 124);
+    padding: 10px;
+    width: 100%;
+    color: white;
+    font-family: arial;
+    font-weight: bold;
+
+}
+
+.produtos{
+    background: black;
+    margin-top: 5px;
+    padding: 7px 12px 7px 12px;
+    color: white;
+    font-size: 18px;
+    width: 100%;   
+    transition: 0.5s;
+        border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.produtos ul li{
+    font-size: 18px;
+}
+
+#combo1-lista{
+    display: none;
+}
+
+.pedido{
+    background: rgb(9, 35, 65);
+    color: white;
+    padding: 5px 10px 5px 10px;
+    font-size: 16px;
+    margin-top: 5px;
+    width: 240px;
+    border-radius: 10px;
+    display: block;
+}
+
+.img-combo{
+    height: 150px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+#img-combo{
+    background-image: url('../../mokai/assets/combo1.jpeg');
+    background-size: 100% 300px;
+    background-position: center;
+}
+
+#img-combo2{
+    background-image: url('../../mokai/assets/combo2.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+#img-combo3{
+    background-image: url('../../mokai/assets/combo3.jpeg');
+    background-size: 400px 300px;
+    background-position: center;
+}
+
+#img-combo4{
+    background-image: url('../../mokai/assets/combo4.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+#img-combo5{
+    background-image: url('../../mokai/assets/combo5.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+#img-combo6{
+    background-image: url('../../mokai/assets/combo6.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.valorcombo{
+
+    text-align: right;
+    padding-bottom: 10px;
+    background-color: chartreuse;
+    padding: 3px 10px 3px 10px;
+    border-radius: 20px;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 10px;
+    
+
+
+}
+
+.valorhot{
+
+    text-align: right;
+    padding-bottom: 10px;
+    background-color: rgb(212, 216, 8);
+    padding: 3px 10px 3px 10px;
+    border-radius: 20px;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+
+}
+
+.valorhot:before{
+    content: 'Hot: '
+}
+
+.desabilitar{
+    pointer-events: none;
+}
+
+.seupedido{
+    font-size: 20px;
+    display: block;
+    margin-top: 15px;
+    background: gray;
+    padding: 10px;
+    width: 100%;
+    color: white;
+    font-family: arial;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.temaki{
+    font-size: 18px;
+    background-color: darkslategray;
+    color: white;
+    display: inline-block;
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 100%;
+}
+
+.temaki span{
+    margin-top: 10px;
+}
 
 /* ACESSAR CARDÁPIO */
 
@@ -574,6 +736,10 @@ input[type=checkbox] {
         margin-left: 85px;
         margin-top: 40px;
 
+    }
+
+    #img-combo3{
+        background-size: cover;
     }
 }
 

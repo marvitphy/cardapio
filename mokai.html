@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:title" content="Trincheira - Comunicação Visual">
+<meta property="og:description" content="Agência independente de marketing digital, soluções artísticas e websites.">
+<meta property="og:image" content="https://images.pexels.com/photos/132340/pexels-photo-132340.jpeg">
+<meta property="og:url" content="https://www.trincheira.ml/">
+<meta name="twitter:card" content="summary_large_image">
+<meta charset="UTF-8">
+<meta name="abstract" content="Agência independente de marketing digital, soluções artísticas e websites.">
+  <meta name="description" content="Trincheira Comunicação Visual">
+  <meta name="keywords" content="Fazersite,marketing,design,comunicação,inovação,cardapio,">
+  <meta name="author" content="Trincheira - Equipe">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+<meta content="yes" name="apple-touch-fullscreen" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="webauthn-auth-enabled" content="true">
+<meta name="webauthn-registration-enabled" content="true">
+    <meta name="google-site-verification" content="v-idfmyEfHZYYgdGBs74XFMpBi0Vc_9Qr2kMNF0Wzm8" />
+    <link rel="stylesheet" href="./mokai/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/vue"></script>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/7.6.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="/__/firebase/7.6.1/firebase-analytics.js"></script>
+
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+    <!-- FONT AWSOME ICONS-->
+
+    <link rel="stylesheet" href="./css/all.css">
+    <title>Trincheira</title>
+</head>
+<body>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+  
+    <!-- PRINCIPAL -->
+    <!-- Utilizei Jquery e Vue.js ;) -->
+    
+        
+      <div id="app">
+        <section>
+            <div class="container-central">
+                <img src="./mokai/assets/logo.png" alt=""><br>
+                <h1 class="titulo-titulo" data-aos="fade-right">Mokai Delivery</h1> <br>
+                <button class="btn-acessar" @click="mostrar = !mostrar">Acessar Cardápio</button>  
+            </div>  
+        </section>
+        <section>
+
+            <div v-bind:class="{cardapio, mostrar}"> 
+                <!-- CLOSE MENU WINDOW -->
+                <div class="fechar" @click="mostrar = !mostrar">
+                    <i class="fas fa-times"></i>
+                </div>
+
+                <div class="cardapio-content">
+                    
+                    
+                    <div class="img-pastas">
+                        <div class="logo-cardapio">
+                           <img width="80px" height="80px"src="./mokai/assets/logo.png" alt="">
+                        </div>      
+                    </div>
+
+                   <div style="text-align: center; margin-top: 45px; margin-bottom: 35px">
+                    <h1 href="#" class="titulo-cardapio">@mokaidelivery</a>
+                </div> 
+                <div class="infos">Taxa de Entrega <span class="valor-valor">R$ 5,00</span></div>   
+                <form class="cardapio-form">
+                    <br>
+                    <div class="nome">
+                        <h3 class="tipo-escolha" style="margin-bottom: 14px">Digite seu Nome</h3>
+                        <input type="text" name="nome" id="nome-nome" placeholder="Maria de Lurdes" v-model="nome" required>
+                        <span id="caraio"></span>
+                    </div>      
+                    <div class="endereco">
+                        <h3 class="tipo-escolha" style="margin-bottom: 14px">Digite seu Endereço</h3>
+                        <input type="text" name="endereco" placeholder="Rua, Bairro, Número" v-model="endereco" required> {{endereco}}
+                    </div>    
+                    <br>
+                    <!-- Combos  -->
+                    <h3 class="combos-title" id="mostrarCombos" style="margin-bottom: 14px">
+                        Combos <i class="fas fa-angle-double-down" style="float: right;"></i>
+                    </h3>
+                    
+                    <div id="combos" style="display: none;" >
+                    <!-- Combos  -->
+
+                    <div class="combo" id="combo1">
+                        Combo Executivo 01 
+                        <i class="fas fa-caret-down" style="font-size: 24px; float: right"></i>
+                    </div>
+                    <div class="produtos" id="combo1-lista">
+                        <div class="img-combo" id="img-combo">
+            
+                        </div>
+                        <ul>
+                            <li v-for="produtos in combo1">{{produtos}}</li>
+                        </ul>
+                        <div class="valorcombo"><span>10 peças: R$ 24,90</span></div>
+                        <div style="background: rgb(160, 9, 9); padding: 5px 5px; text-align: center; font-size: 18px" @click="add(combocombo1)">
+                            Selecionar <i class="fas fa-plus-circle" style="20px"></i>
+                        </div>
+                    </div>
+
+                    <div class="combo" id="combo2">
+                        Combo Executivo 02 
+                        <i class="fas fa-caret-down" style="font-size: 24px; float: right"></i>
+                    </div>
+                    <div class="produtos" id="combo2-lista" style="display: none;">
+                        <div class="img-combo" id="img-combo2">
+            
+                        </div>
+                        <ul>
+                            <li v-for="produtos in combo2">{{produtos}}</li>
+                        </ul>
+                        <div class="valorcombo"><span>15 peças: R$ 37,90</span></div>
+                        <div style="background: rgb(160, 9, 9); padding: 5px 5px; text-align: center; font-size: 18px" @click="add(combocombo2)">
+                            Selecionar <i class="fas fa-plus-circle" style="20px"></i>
+                        </div>
+                    </div>
+
+                    <div class="combo" id="combo3">
+                        Combo Executivo 03 
+                        <i class="fas fa-caret-down" style="font-size: 24px; float: right"></i>
+                    </div>
+                    <div class="produtos" id="combo3-lista" style="display: none;">
+                        <div class="img-combo" id="img-combo3">
+            
+                        </div>
+                        <ul>
+                            <li v-for="produtos in combo3">{{produtos}}</li>
+                        </ul>
+                        <div class="valorcombo"><span>30 peças: R$ 74,70</span></div>
+                        <div style="background: rgb(160, 9, 9); padding: 5px 5px; text-align: center; font-size: 18px" @click="add(combocombo3)">
+                            Selecionar <i class="fas fa-plus-circle" style="20px"></i>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="combo" id="combo4">
+                        Combo Executivo 04 
+                        <i class="fas fa-caret-down" style="font-size: 24px; float: right"></i>
+                    </div>
+                    <div class="produtos" id="combo4-lista" style="display: none;">
+                        <div class="img-combo" id="img-combo4">
+            
+                        </div>
+                        <ul>
+                            <li v-for="produtos in combo4">{{produtos}}</li>
+                        </ul>
+                        <div class="valorcombo"><span>50 peças: R$ 124,50</span></div>
+                        <div style="background: rgb(160, 9, 9); padding: 5px 5px; text-align: center; font-size: 18px" @click="add(combocombo4)">
+                            Selecionar <i class="fas fa-plus-circle" style="20px"></i>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="combo" id="combo5">
+                        Combo Executivo 05 
+                        <i class="fas fa-caret-down" style="font-size: 24px; float: right"></i>
+                    </div>
+                    <div class="produtos" id="combo5-lista" style="display: none;">
+                        <div class="img-combo" id="img-combo5">
+            
+                        </div>
+                        <ul>
+                            <li v-for="produtos in combo5">{{produtos}}</li>
+                        </ul>
+                        <div class="valorcombo"><span>60 peças: R$ 149,40</span></div>
+                        <div style="background: rgb(160, 9, 9); padding: 5px 5px; text-align: center; font-size: 18px" @click="add(combocombo5)">
+                            Selecionar <i class="fas fa-plus-circle" style="20px"></i>
+                        </div>
+                    </div>
+
+
+
+                    <div class="combo" id="combo6">
+                        Combo Executivo 06 
+                        <i class="fas fa-caret-down" style="font-size: 24px; float: right"></i>
+                    </div>
+                    <div class="produtos" id="combo6-lista" style="display: none;">
+                        <div class="img-combo" id="img-combo6">
+            
+                        </div>
+                        <ul>
+                            <li v-for="produtos in combo6">{{produtos}}</li>
+                        </ul>
+                        <div class="valorcombo"><span>80 peças: R$ 199,20</span></div>
+                        <div style="background: rgb(160, 9, 9); padding: 5px 5px; text-align: center; font-size: 18px" @click="add(combocombo6)">
+                            Selecionar <i class="fas fa-plus-circle" style="20px"></i>
+                        </div>
+                    </div>
+
+
+                    
+                    <div class="combo" id="combo7">
+                        Combo Executivo 07 
+                        <i class="fas fa-caret-down" style="font-size: 24px; float: right"></i>
+                    </div>
+                    <div class="produtos" id="combo7-lista" style="display: none;">
+                        <div class="img-combo" id="img-combo6">
+            
+                        </div>
+                        <ul>
+                            <li v-for="produtos in combo7">{{produtos}}</li>
+                        </ul>
+                        <div class="valorcombo"><span>80 peças: R$ 199,20</span></div>
+                        <div style="background: rgb(160, 9, 9); padding: 5px 5px; text-align: center; font-size: 18px" @click="add(combocombo7)">
+                            Selecionar <i class="fas fa-plus-circle" style="20px"></i>
+                        </div>
+                    </div>
+
+                </div>
+
+                <h3 class="combos-title" id="mostrarTemaki" style="margin-bottom: 14px">
+                    Temaki(s)<i class="fas fa-angle-double-down" style="float: right;"></i>
+                </h3>
+
+                <div id="temakis" style="display: none">
+                    
+
+
+                    <div class="combo" id="temaki1">
+                        Temaki de salmão simples
+                        <i class="fas fa-caret-down" style="font-size: 24px; float: right"></i>
+                    </div>
+                    <div class="produtos" id="temakilista1" style="display: none;">
+                        <ul>
+                            <li>{{temakilista}}</li>
+                        </ul>
+                        <div class="valorcombo"><span>R$ 21,00</span></div>
+                        <div style="background: rgb(160, 9, 9); padding: 5px 5px; text-align: center; font-size: 18px" @click="add(temaki1)">
+                            Selecionar <i class="fas fa-plus-circle" style="20px"></i>
+                        </div>
+                    </div>
+
+
+                    <div class="combo" id="temaki2">
+                        Temaki de salmão especial
+                        <i class="fas fa-caret-down" style="font-size: 24px; float: right"></i>
+                    </div>
+                    <div class="produtos" id="temakilista2" style="display: none;">
+                        <ul>
+                            <li v-for="x in temakilista2 ">{{x}}</li>
+                        </ul>
+                        <div class="valorcombo"><span>R$ 23,00</span></div>
+                        <div style="background: rgb(160, 9, 9); padding: 5px 5px; text-align: center; font-size: 18px; margin-bottom: 15px" @click="add(temaki2)">
+                            Selecionar <i class="fas fa-plus-circle" style="20px;"></i>
+                        </div>
+                        <hr>
+                        <div class="valorhot"><span>R$ 25,00 </span></div>
+                        <div style="background: rgb(160, 9, 9); padding: 5px 5px; text-align: center; font-size: 18px" @click="add(temaki2hot)">
+                            Selecionar <i class="fas fa-plus-circle" style="20px"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="combo" id="temaki3">
+                        Temaki de salmão especial <br> s/ arroz
+                        <i class="fas fa-caret-down" style="font-size: 24px; float: right"></i>
+                    </div>
+                    <div class="produtos" id="temakilista3" style="display: none;"> <br>
+                        <span>
+                            Salmão, Cream Cheese <br> e cebolinha
+                        </span> <br> <br>
+                        <div class="valorcombo"><span>R$ 27,00</span></div>
+                        <div style="background: rgb(160, 9, 9); padding: 5px 5px; text-align: center; font-size: 18px" @click="add(temaki3)">
+                            Selecionar <i class="fas fa-plus-circle" style="20px"></i>
+                        </div>
+                    </div>
+
+                    
+                    
+
+
+                    <div class="combo" id="temaki4">
+                        Temaki de camarão especial
+                        <i class="fas fa-caret-down" style="font-size: 24px; float: right"></i>
+                    </div>
+                    <div class="produtos" id="temakilista4" style="display: none;">
+                        <ul>
+                            <li v-for="x in temakilista4 ">{{x}}</li>
+                        </ul>
+                        <div class="valorcombo"><span>R$ 29,00</span></div>
+                        <div style="background: rgb(160, 9, 9); padding: 5px 5px; text-align: center; font-size: 18px; margin-bottom: 15px" @click="add(temaki4)">
+                            Selecionar <i class="fas fa-plus-circle" style="20px;"></i>
+                        </div>
+                        <hr>
+                        <div class="valorhot"><span>R$ 31,00 </span></div>
+                        <div style="background: rgb(160, 9, 9); padding: 5px 5px; text-align: center; font-size: 18px" @click="add(temaki4hot)">
+                            Selecionar <i class="fas fa-plus-circle" style="20px"></i>
+                        </div>
+                    </div>
+
+
+
+                    <div class="combo" id="temaki5">
+                        Temaki de camarão especial <br> s/ arroz
+                        <i class="fas fa-caret-down" style="font-size: 24px; float: right"></i>
+                    </div>
+                    <div class="produtos" id="temakilista5" style="display: none;"> <br>
+                        <span>
+                            Camarão, creme cheese e <br>cebolinha
+                        </span> <br> <br>
+                        <div class="valorcombo"><span>R$ 31,00</span></div>
+                        <div style="background: rgb(160, 9, 9); padding: 5px 5px; text-align: center; font-size: 18px" @click="add(temaki5)">
+                            Selecionar <i class="fas fa-plus-circle" style="20px"></i>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+        
+                    <hr width="100%">
+
+                    <span class="seupedido">Seu pedido: </span>
+                    <small style="font-size: 16px; color: gray">Para deletar um item bastar clicar</small><br>
+
+                    <div class="pedido" v-for="(unidade, index) in pedido" @click="removeElement(index)">
+                       {{unidade}} <i class="fas fa-times" style="float: right"></i>
+                    </div>
+                    <br>
+
+                    
+                    <div class="troco">
+                        <h3 class="tipo-escolha" style="margin-bottom: 14px">Troco pra quanto?</h3>
+                        <input type="text" name="troco" id="troco" placeholder="Ex: 50, 60, 70..." Value="R$ ">
+                        <span id="caraio"></span>
+                    </div>
+
+
+                        <!-- BOTÃO ENVIAR -->
+                        <div id="msg-wpp">Agora basta enviar a mensagem que aparecerá no seu <i class="fab fa-whatsapp" style="font-size: 14px;"></i></div>
+                        <a v-bind:href="'https://api.whatsapp.com/send?phone=+5599984850548&text=Olá, sou ' + '*'+nome+'*' + ' e este é meu pedido: %0A' + '[--- Pedido ---]' + pedido + '%0A' + 'Este é meu endereço: %0A' + '*'+endereco+'*'"><div class="btn-enviar">Finalizar Pedido <i class="fab fa-whatsapp" style="font-size: 25px"></i> </div></a>
+                        <span id="total"></span>
+                        <br><br><br>
+                        <!-- BOTÃO ENVIAR -->
+
+                </form>
+            </div>
+            </div>
+        </section>
+
+        <!-- RODAPÉ -->
+        <div class="footer">
+            <div style="text-align: center; margin-top: 20px">
+                <a href="https://www.instagram.com/monalisamassas/"><i class="fab fa-instagram" ></i></a>
+                <a href="https://www.facebook.com/monalisamassasespeciais"><i class="fab fa-facebook"></i></a>
+                <a href="#"> <i class="fas fa-envelope-square"></i> </a>
+            </div>
+          </div>  
+        <!-- RODAPÉ --> 
+
+        <script src="./mokai/js/jquery3.4.1.min.js"></script>
+        <script src="./mokai/js/main.js"></script>
+        <script src="./mokai/js/app.js"></script>
+        
+
+    </div>
+</body>
+</html> 
