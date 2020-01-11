@@ -24,6 +24,7 @@ new Vue({
        combocombo5: ' Combo Executivo 5 - 60 peças: R$ 149,40 ',
        combocombo6: ' Combo Executivo 6 - 80 peças: R$ 199,20 ',
        combocombo7: ' Combo Executivo 7 - 120 peças: R$ 298,80 ',
+       comboMontado: [],
        temakilista: 'Salmão, arroz e cebolinha',
        temaki1: ' Temaki de salmão simples - R$ 21,00 ',
        temakilista2: ['Ingredientes:', 'Arroz', 'Salmão', 'Cream Cheese', ' e Cebolinha'],
