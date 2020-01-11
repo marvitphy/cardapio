@@ -42,13 +42,13 @@
 <body>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-      </script>
   
-    <!-- PRINCIPAL -->
-    <!-- Utilizei Jquery e Vue.js ;) -->
+   
+    <!-- Direitos autorais de: @trincheira_marketing -->
+    <!-- Vue.js e jquery -->
     
+
+     <!-- PRINCIPAL -->
         
       <div id="app">
         <section>
@@ -79,7 +79,7 @@
                     <h1 href="#" class="titulo-cardapio">@mokaidelivery</a>
                 </div> 
                 <div class="infos">Taxa de Entrega <span class="valor-valor">R$ 5,00</span></div>   
-                <form class="cardapio-form">
+                <form class="cardapio-form" autocomplete="on">
                     <br>
                     <div class="nome">
                         <h3 class="tipo-escolha" style="margin-bottom: 14px">Digite seu Nome</h3>
@@ -94,18 +94,15 @@
                     <!-- Combos  -->
                     <h3 class="combos-title" id="mostrarCombos" style="margin-bottom: 14px">
                         Combos <i class="fas fa-angle-double-down" style="float: right;"></i>
-                    </h3>
-                    
+                    </h3>      
                     <div id="combos" style="display: none;" >
                     <!-- Combos  -->
-
                     <div class="combo" id="combo1">
                         Combo Executivo 01  
                         <i class="fas fa-caret-down" style="font-size: 24px; float: right"></i>
                     </div>
                     <div class="produtos" id="combo1-lista">
                         <div class="img-combo" id="img-combo">
-            
                         </div>
                         <ul>
                             <li v-for="produtos in combo1">{{produtos}}</li>
@@ -169,8 +166,6 @@
                             Selecionar <i class="fas fa-plus-circle" style="20px"></i>
                         </div>
                     </div>
-
-
 
 
                     <div class="combo" id="combo5">
