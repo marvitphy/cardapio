@@ -17,13 +17,13 @@ new Vue({
        combo5: ['5 Niguiri', '5 Sashimi', '5 Joy c/patê de salmão', '5 Joy c/creme cheese', '5 Uramaki Califórnia', '5 Niguiri flambado', '10 Hot philadelphia', '10 Hossamaki de salmão', '10 Uramaki de salmão'],
        combo6: ['10 Sashimi', '10 Niguiri', '10 Hot holl', '10 Hossamaki de atum', '10 Uramaki de salmão', '10 Hossamaki de salmão', '5 Sashimi flambado', '5 Niguiri flambado', '5 Uramaki Califórnia', '5 Joy'],
        combo7: ['15 Sashimi', '15 Hot holl',  '10 Niguiri',  '10 Joy', '10 Niguiri flambado',  '10 Sashimi flambado',  '10 Uramaki de salmão', '10 Hossamaki de salmão',  '10 Hossamaki Califórnia', '10 Uramaki de atum',  '10 Hossamaki de camarão' ],
-       combocombo1: ' Combo Executivo 1 - 10 peças: R$ 24,90 ',
-       combocombo2: ' Combo Executivo 2 - 15 peças: R$ 37,35 ',
-       combocombo3: ' Combo Executivo 3 - 30 peças: R$ 74,70 ',
-       combocombo4: ' Combo Executivo 4 - 50 peças: R$ 124,50 ',
-       combocombo5: ' Combo Executivo 5 - 60 peças: R$ 149,40 ',
-       combocombo6: ' Combo Executivo 6 - 80 peças: R$ 199,20 ',
-       combocombo7: ' Combo Executivo 7 - 120 peças: R$ 298,80 ',
+       combocombo1: ' Combo Executivo 1 - 10 peças: R$ 30,90 ',
+       combocombo2: ' Combo Executivo 2 - 15 peças: R$ 42,35 ',
+       combocombo3: ' Combo Executivo 3 - 30 peças: R$ 79,70 ',
+       combocombo4: ' Combo Executivo 4 - 50 peças: R$ 126,50 ',
+       combocombo5: ' Combo Executivo 5 - 60 peças: R$ 154,40 ',
+       combocombo6: ' Combo Executivo 6 - 80 peças: R$ 204,20 ',
+       combocombo7: ' Combo Executivo 7 - 120 peças: R$ 303,80 ',
        comboMontado: [],
        temakilista: 'Salmão, arroz e cebolinha',
        temaki1: ' Temaki de salmão simples - R$ 21,00 ',
@@ -49,13 +49,16 @@ new Vue({
        pedido: [],
        desabilitar: false,
        dialog: '',
+       qtdSashimi: 0,
+       qtdJoy: 0,
+       meuCombo: []
     },
     methods:{
         greet: function(time){
             return 'Bom ' + time + ' ' + this.name;
         },
         add: function(val){
-            alert('Você selecionou: ' + val);
+            alert('Você selecionou: ' + val + 'Valor + Taxa de Entrega de R$ 5,00');
             this.pedido.push(val);
         },
         add2: function(val){
@@ -69,7 +72,22 @@ new Vue({
         },
         removeElement: function (index) {
             this.$delete(this.pedido, index);
-          }
+          },
+        addqtdsashimi: function(){
+            return this.qtdSashimi++;
+        },
+        diminuirqtdsashimi: function(){
+            return this.qtdSashimi--;
+        },
+        addqtdjoy: function(){
+            return this.qtdJoy++;
+        },
+        diminuirqtdjoy: function(){
+            return this.qtdJoy--;
+        },
+        soma: function(){
+            return 3 * this.qtdSashimi;
+        }
     },
     computed:{
         addtoA: function(){
@@ -89,3 +107,4 @@ new Vue({
 
     }
 })
+

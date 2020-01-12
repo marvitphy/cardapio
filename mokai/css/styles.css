@@ -1,4 +1,6 @@
 @import url('fonts.css');
+@import url('https://fonts.googleapis.com/css?family=Sniglet&display=swap');
+
 
 html, body {
 
@@ -517,7 +519,7 @@ input[type=checkbox] {
 }
 
 .combo{
-    background: rgb(22, 22, 22);
+    background: rgb(41, 41, 41);
     margin-top: 5px;
     padding: 7px 12px 7px 12px;
     color: white;
@@ -571,7 +573,7 @@ input[type=checkbox] {
 }
 
 .img-combo{
-    height: 150px;
+    height: 250px;
     width: 100%;
     margin-top: 5px;
     border-radius: 10px;
@@ -579,8 +581,9 @@ input[type=checkbox] {
 
 
 #img-combo{
-    background-image: url('../../mokai/assets/combo1.jpeg');
+    background-image: url('../../mokai/assets/combo1rotacionado.jpeg');
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
@@ -588,12 +591,14 @@ input[type=checkbox] {
 #img-combo2{
     background-image: url('../../mokai/assets/combo2.jpeg');
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
 #img-combo3{
     background-image: url('../../mokai/assets/combo3.jpeg');
-    background-size: 400px 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
@@ -680,7 +685,24 @@ input[type=checkbox] {
 .temaki span{
     margin-top: 10px;
 }
+.pecas{
+    background-color: rgb(83, 142, 156);
+    color: white;
+    padding: 8px 10px 8px 10px;
+    display: inline-block;
+    width: 100%;
+    font-size: 20px;
+    border-radius: 5px;
 
+}
+
+.qtdpecas{
+    background-color: rgb(25, 91, 107);
+    float:right;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}
 /* ACESSAR CARDÁPIO */
 
 
@@ -743,6 +765,21 @@ input[type=checkbox] {
 
     #img-combo3{
         background-size: cover;
+        
+    }
+
+    #img-combo{
+        background-image: url('../../mokai/assets/combo1rotacionado.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .img-combo{
+        height: 150px;
+        width: 100%;
+        margin-top: 5px;
+        border-radius: 10px;
     }
 }
 
