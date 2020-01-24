@@ -85,8 +85,11 @@ new Vue({
         diminuirqtdjoy: function(){
             return this.qtdJoy--;
         },
-        soma: function(){
+        calcSashimi: function(){
             return 3 * this.qtdSashimi;
+        }
+        calcSashimi: function(){
+            return 2.80 * this.qtdJoy;
         }
     },
     computed:{
