@@ -60,7 +60,8 @@ new Vue({
        guarana: 'Guaraná de 1 Litro - R$ 7.20',
        vinho1: 'Vinho Galioto 750 ml - R$23.90',
        vinho2: 'Vinho Reservado - Concha y Toro  - R$39.90',
-       vinho3: 'Vinho Santa Helena - R$39.90'
+       vinho3: 'Vinho Santa Helena - R$39.90',
+       troco: ''
     },
     methods:{
         greet: function(time){

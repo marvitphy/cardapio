@@ -444,13 +444,16 @@
                     <br>
                     <div class="troco">
                         <h3 class="tipo-escolha" style="margin-bottom: 14px">Troco pra quanto?</h3>
-                        <input type="text" name="troco" id="troco" placeholder="Ex: 50, 60, 70..." Value="R$ ">
+                        <input type="text" name="troco" id="troco" placeholder="Ex: 50, 60, 70..." Value="R$ " v-model="troco"> {{troco}}
                     </div>
 
 
                         <!-- BOTÃO ENVIAR -->
                         <div id="msg-wpp">Agora basta enviar a mensagem que aparecerá no seu <i class="fab fa-whatsapp" style="font-size: 14px;"></i></div>
-                        <a v-bind:href="'https://api.whatsapp.com/send?phone=+5599984850548&text=Olá, sou ' + '*'+nome+'*' + ' e este é meu pedido: %0A' + '[--- Pedido ---]%0A' + pedido + '%0A' + 'Este é meu endereço: %0A' + '*'+endereco+'*'"><div class="btn-enviar">Finalizar Pedido <i class="fab fa-whatsapp" style="font-size: 25px"></i> </div></a>
+                        <a v-bind:href="'https://api.whatsapp.com/send?phone=+5599984850548&text=Olá, sou ' + ''+nome+'' + ' e este é meu pedido: %0A' + '%0A*'+'[--- Pedido ---]'+'* %0A' + pedido + '%0A*[---------------]* %0A %0A' + '*Endereço:* ' + ''+endereco+'' + '%0A' + '*Troco:* R$ ' + ''+troco+''
+                        
+                        + '%0A'+'*Taxa de Entrega* = R$ 6,00'
+                        "><div class="btn-enviar">Finalizar Pedido <i class="fab fa-whatsapp" style="font-size: 25px"></i> </div></a>
                         <span id="total"></span>
                         <br><br><br>
                         <!-- BOTÃO ENVIAR -->
