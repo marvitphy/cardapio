@@ -51,7 +51,7 @@ new Vue({
        dialog: '',
        qtdSashimi: 0,
        qtdJoy: 0,
-       meuCombo: []
+       meuCombo: ['Joy', 'Joy sem Arroz', 'Joy com camarão empanado', 'Joy flambado sem arroz  com queijo coalho', 'Joy sem arroz com queijo coalho']
     },
     methods:{
         greet: function(time){
@@ -87,8 +87,8 @@ new Vue({
         },
         calcSashimi: function(){
             return 3 * this.qtdSashimi;
-        }
-        calcSashimi: function(){
+        },
+        calcJoy: function(){
             return 2.80 * this.qtdJoy;
         }
     },

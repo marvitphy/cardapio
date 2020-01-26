@@ -703,6 +703,18 @@ input[type=checkbox] {
     padding-right: 10px;
     border-radius: 5px;
 }
+
+.lista-meucombo li{
+    font-size: 18px;
+}
+
+.number-picker{
+    width: 10px;
+}
+
+.number-picker input[type=number]{
+    width: 50px;
+}
 /* ACESSAR CARDÁPIO */
 
 
