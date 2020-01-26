@@ -53,6 +53,33 @@ $(document).ready(function(){
     $("#mostrarTemaki").click(function() {
         $("#temakis").toggle();
     });
+    $("#mostrarBebidas").click(function() {
+        $("#bebidas").toggle();
+    });
+    $("#coca1l").click(function() {
+        $("#cocalista1").toggle();
+    });
+    $("#coca2l").click(function() {
+        $("#cocalista2").toggle();
+    });
+    $("#cocalata").click(function() {
+        $("#cocalata2").toggle();
+    });
+    $("#guarana").click(function() {
+        $("#guarana2").toggle();
+    });
+    $("#vinho1").click(function() {
+        $("#vinhogalioto").toggle();
+    });
+    
+    $("#vinho2").click(function() {
+        $("#vinhoconcha").toggle();
+    });
+    $("#vinho3").click(function() {
+        $("#vinhosanta").toggle();
+    });
+    
+    
 
 
 

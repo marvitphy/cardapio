@@ -17,13 +17,13 @@ new Vue({
        combo5: ['5 Niguiri', '5 Sashimi', '5 Joy c/patê de salmão', '5 Joy c/creme cheese', '5 Uramaki Califórnia', '5 Niguiri flambado', '10 Hot philadelphia', '10 Hossamaki de salmão', '10 Uramaki de salmão'],
        combo6: ['10 Sashimi', '10 Niguiri', '10 Hot holl', '10 Hossamaki de atum', '10 Uramaki de salmão', '10 Hossamaki de salmão', '5 Sashimi flambado', '5 Niguiri flambado', '5 Uramaki Califórnia', '5 Joy'],
        combo7: ['15 Sashimi', '15 Hot holl',  '10 Niguiri',  '10 Joy', '10 Niguiri flambado',  '10 Sashimi flambado',  '10 Uramaki de salmão', '10 Hossamaki de salmão',  '10 Hossamaki Califórnia', '10 Uramaki de atum',  '10 Hossamaki de camarão' ],
-       combocombo1: ' Combo Executivo 1 - 10 peças: R$ 30,90 ',
-       combocombo2: ' Combo Executivo 2 - 15 peças: R$ 42,35 ',
-       combocombo3: ' Combo Executivo 3 - 30 peças: R$ 79,70 ',
-       combocombo4: ' Combo Executivo 4 - 50 peças: R$ 126,50 ',
-       combocombo5: ' Combo Executivo 5 - 60 peças: R$ 154,40 ',
-       combocombo6: ' Combo Executivo 6 - 80 peças: R$ 204,20 ',
-       combocombo7: ' Combo Executivo 7 - 120 peças: R$ 303,80 ',
+       combocombo1: ' Combo Executivo 1 - 10 peças: R$ 24,90 ',
+       combocombo2: ' Combo Executivo 2 - 15 peças: R$ 37,90 ',
+       combocombo3: ' Combo Executivo 3 - 30 peças: R$ 74,70 ',
+       combocombo4: ' Combo Executivo 4 - 50 peças: R$ 124,50 ',
+       combocombo5: ' Combo Executivo 5 - 60 peças: R$ 149,40 ',
+       combocombo6: ' Combo Executivo 6 - 80 peças: R$ 199,20 ',
+       combocombo7: ' Combo Executivo 7 - 120 peças: R$ 298,80 ',
        comboMontado: [],
        temakilista: 'Salmão, arroz e cebolinha',
        temaki1: ' Temaki de salmão simples - R$ 21,00 ',
@@ -51,15 +51,27 @@ new Vue({
        dialog: '',
        qtdSashimi: 0,
        qtdJoy: 0,
-       meuCombo: ['Joy', 'Joy sem Arroz', 'Joy com camarão empanado', 'Joy flambado sem arroz  com queijo coalho', 'Joy sem arroz com queijo coalho']
+       selSashimi: 'Sashimi',
+       selJoy: 'Joy',
+       meuCombo: [],
+       coca1l: 'Coca-Cola 1 Litro - R$ 7.00',
+       coca2l: 'Coca-Cola 2 Litro - R$ 10.00',
+       cocalata: 'Coca-Cola Lata -  R$ 4.00',
+       guarana: 'Guaraná de 1 Litro - R$ 7.20',
+       vinho1: 'Vinho Galioto 750 ml - R$23.90',
+       vinho2: 'Vinho Reservado - Concha y Toro  - R$39.90',
+       vinho3: 'Vinho Santa Helena - R$39.90'
     },
     methods:{
         greet: function(time){
             return 'Bom ' + time + ' ' + this.name;
         },
         add: function(val){
-            alert('Você selecionou: ' + val + 'Valor + Taxa de Entrega de R$ 5,00');
+            alert('Você selecionou: ' + val);
             this.pedido.push(val);
+        },
+        addmeuCombo: function(x){
+            this.meuCombo.push(x);
         },
         add2: function(val){
             this.pedido.push(val);

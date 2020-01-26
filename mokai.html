@@ -309,15 +309,103 @@
                     </div>
 
                 </div>
-                <!-- Combos  -->
+
+                <h3 class="combos-title" id="mostrarBebidas" style="margin-bottom: 14px">
+                    Bebidas(s)<i class="fas fa-angle-double-down" style="float: right;"></i>
+                </h3>
+
+                <div id="bebidas" style="display: none">
+
+                    <div class="combo" id="coca1l">
+                        Coca-Cola 1 Litro
+                        <i class="fas fa-caret-down" style="font-size: 24px; float: right"></i>
+                    </div>
+                    <div class="produtos" id="cocalista1" style="display: none;">
+                        <div class="valorcombo"><span>R$ 7.00</span></div>
+                        <div style="background: rgb(160, 9, 9); padding: 5px 5px; text-align: center; font-size: 18px" @click="add(coca1l)">
+                            Selecionar <i class="fas fa-plus-circle" style="20px"></i>
+                        </div>
+                    </div>
+
+                    <div class="combo" id="coca2l">
+                        Coca de 2 Litros
+                        <i class="fas fa-caret-down" style="font-size: 24px; float: right"></i>
+                    </div>
+                    <div class="produtos" id="cocalista2" style="display: none;">
+                        <div class="valorcombo"><span>R$ 10.00</span></div>
+                        <div style="background: rgb(160, 9, 9); padding: 5px 5px; text-align: center; font-size: 18px" @click="add(coca2l)">
+                            Selecionar <i class="fas fa-plus-circle" style="20px"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="combo" id="cocalata">
+                        Coca-Cola de Lata
+                        <i class="fas fa-caret-down" style="font-size: 24px; float: right"></i>
+                    </div>
+                    <div class="produtos" id="cocalata2" style="display: none;">
+                        <div class="valorcombo"><span>R$ 4.00</span></div>
+                        <div style="background: rgb(160, 9, 9); padding: 5px 5px; text-align: center; font-size: 18px" @click="add(cocalata)">
+                            Selecionar <i class="fas fa-plus-circle" style="20px"></i>
+                        </div>
+                    </div>
+ 
+                    <div class="combo" id="guarana">
+                        Guaraná de 1 Litro 
+                        <i class="fas fa-caret-down" style="font-size: 24px; float: right"></i>
+                    </div>
+                    <div class="produtos" id="guarana2" style="display: none;">
+                        <div class="valorcombo"><span>R$ 7.20</span></div>
+                        <div style="background: rgb(160, 9, 9); padding: 5px 5px; text-align: center; font-size: 18px" @click="add(guarana)">
+                            Selecionar <i class="fas fa-plus-circle" style="20px"></i>
+                        </div>
+                    </div>
+
+                    <div class="combo" id="vinho1">
+                        Vinho Galioto 750 ml  
+                        <i class="fas fa-caret-down" style="font-size: 24px; float: right"></i>
+                    </div>
+                    <div class="produtos" id="vinhogalioto" style="display: none;">
+                        <div class="valorcombo"><span>R$ 23.90</span></div>
+                        <div style="background: rgb(160, 9, 9); padding: 5px 5px; text-align: center; font-size: 18px" @click="add(vinho1)">
+                            Selecionar <i class="fas fa-plus-circle" style="20px"></i>
+                        </div>
+                    </div>
+
+                    <div class="combo" id="vinho2">
+                        Vinho Reservado - Concha y Toro 
+                        <i class="fas fa-caret-down" style="font-size: 24px; float: right"></i>
+                    </div>
+                    <div class="produtos" id="vinhoconcha" style="display: none;">
+                        <div class="valorcombo"><span>R$ 39.90</span></div>
+                        <div style="background: rgb(160, 9, 9); padding: 5px 5px; text-align: center; font-size: 18px" @click="add(vinho2)">
+                            Selecionar <i class="fas fa-plus-circle" style="20px"></i>
+                        </div>
+                    </div>
+
+                    <div class="combo" id="vinho3">
+                        Vinho Santa Helena
+                        <i class="fas fa-caret-down" style="font-size: 24px; float: right"></i>
+                    </div>
+                    <div class="produtos" id="vinhosanta" style="display: none;">
+                        <div class="valorcombo"><span>R$ 39.90</span></div>
+                        <div style="background: rgb(160, 9, 9); padding: 5px 5px; text-align: center; font-size: 18px" @click="add(vinho3)">
+                            Selecionar <i class="fas fa-plus-circle" style="20px"></i>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- Combos  
+
                 <h3 class="combos-title" id="mostrarCombos" style="margin-bottom: 14px">
                     Monte o seu Combo <i class="fas fa-angle-double-down" style="float: right;"></i>
                 </h3>      
-                <!-- Combos  -->
+
 
                 <div class="pecas">
 
-                    <span> <b>Sashimi</b> R$ 2,99 Unid.</span> 
+                    <span> <input type="checkbox" @click.once="addmeuCombo(selSashimi)"><b>Sashimi</b> R$ 2,99 Unid.</span> 
                     <div class="qtdpecas">
                         <i class="fas fa-minus" @click="diminuirqtdsashimi"></i>
                         <span v-model="qtdSashimi" style="padding-left: 5px; padding-right: 5px;">{{qtdSashimi}}</span> 
@@ -325,7 +413,7 @@
                     </div>
                      <br><br>
 
-                    <span><b>Joy</b> R$ 2,80 Unid.</span>  
+                    <span> <input type="checkbox" @click.once="addmeuCombo(selJoy)"> <b>Joy</b> R$ 2,80 Unid.</span>  
                     <div class="qtdpecas">
                         <i class="fas fa-minus" @click="diminuirqtdjoy"></i>
                         <span v-model="qtdSashimi" style="padding-left: 5px; padding-right: 5px;">{{qtdJoy}}</span> 
@@ -339,7 +427,7 @@
                 
                 </div>        
                 
-                {{calcSashimi()}}
+                {{meuCombo}} {{calcSashimi()}}-->
 
 
 
@@ -347,14 +435,13 @@
                     <hr width="100%">
 
                     <span class="seupedido">Seu pedido: </span>
-                    <small style="font-size: 16px; color: gray">Para deletar um item bastar clicar</small><br>
-
+                    <small style="font-size: 16px; color: gray">Para deletar um item bastar clicar</small>
+                    <small style="font-size: 16px; color: gray"> --- Taxa de Entrega: R$ 5,00</small>
+                    <br>
                     <div class="pedido" v-for="(unidade, index) in pedido" @click="removeElement(index)">
                        {{unidade}} <i class="fas fa-times" style="float: right"></i>
                     </div>
                     <br>
-
-                    
                     <div class="troco">
                         <h3 class="tipo-escolha" style="margin-bottom: 14px">Troco pra quanto?</h3>
                         <input type="text" name="troco" id="troco" placeholder="Ex: 50, 60, 70..." Value="R$ ">
