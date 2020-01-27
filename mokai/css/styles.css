@@ -757,7 +757,7 @@ input[type=checkbox] {
         display: inline-block;
         margin-top: 60px;
         font-size: 25px;
-        width: initial;
+        width: 300px;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 
